@@ -4,5 +4,8 @@
 #pragma once
 
 #include <iostream>
-
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/opencv.hpp>
 // TODO: Reference additional headers your program requires here.
+// #include "kernels/cv_rgb_grayscale.cu"
