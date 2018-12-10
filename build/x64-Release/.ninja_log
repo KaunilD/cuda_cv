@@ -1,0 +1,4 @@
+# ninja log v5
+4	9002	566108830	src/CMakeFiles/cuda_cv.dir/kernels/cuda_cv_generated_hello.cu.obj	29e441cf42d072cf
+9003	11865	566108833	src/CMakeFiles/cuda_cv.dir/cuda_cv.cpp.obj	e07d7151b7d2fb7d
+11872	13083	566108835	src/cuda_cv.exe	63e5fb8a66a1f73

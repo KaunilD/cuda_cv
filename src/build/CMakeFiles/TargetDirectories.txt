@@ -1,3 +1,0 @@
-C:/Users/dhruv/Development/cuda/cuda_cv/src/build/CMakeFiles/cuda_cv.dir
-C:/Users/dhruv/Development/cuda/cuda_cv/src/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/dhruv/Development/cuda/cuda_cv/src/build/CMakeFiles/ZERO_CHECK.dir

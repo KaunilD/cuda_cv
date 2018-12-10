@@ -6,7 +6,7 @@ using namespace std;
 
 cv::Mat image;
 cv::Mat imageGray;
-
+void h_hello_world();
 int main()
 {
 	const string& img_filename = "C:\\Users\\dhruv\\Development\\cuda\\cuda_cv\\src\\len_full.jpg";
@@ -18,5 +18,6 @@ int main()
 
 	cv::imwrite("lena_rgba.png", image);
 	cv::imwrite("lena_grey.png", imageGray);
+	h_hello_world();
 	return 0;
 }
