@@ -31,3 +31,7 @@ Entire project is built using CMake (3.9) with MSVC 2017 generator rules on Wind
 2. Install all the components except __Visual Studio Integration__.
 3. After the installation is complete copy files under `CUDA/CUDAVisualStudioIntegration\extras\visual_studio_integration\MSBuildExtensions` to `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\BuildCustomizations`
 4. Now you have successfully installed and integrated CUDA support in Visual Studio.
+5. You might want to edit host_config.h and change the upper limit for MSC_VER greatr than 1911 like this: `#if _MSC_VER < 1600 || _MSC_VER > 1955`
+
+#### NOTE:
+1. Do not include any `.cu` files in the cpp header files `.h`. NVCC mistakes `.cu` as cpp files on account of it being called int he header files and uses native c compiler for compilation instead of nvcc itself compiling it.
