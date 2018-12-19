@@ -2,9 +2,14 @@
 
 Implementation of Computer Vision algorithms with Nvidia CUDA support.
 
+![execution chart](comparision.png)
 
+### Table of contents
 
-### 1. Libraries
+1. [Dependencies](### 1.Libraries)
+2. [Setup](### 2. Setup)
+
+### 1. Dependencies
 
 1. OpenCV 3.4 - For converting images to Mat. That's it.
 2. CUDA 
