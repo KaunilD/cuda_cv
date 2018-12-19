@@ -24,7 +24,6 @@ int main()
 	image = cv::imread(img_filename);
 	// convert to RGBA becuase cuda uses uchar4.
 	cv::cvtColor(image, imageRGBA, CV_BGR2RGBA);
-	cv::resize(image, image, cv::Size(), 6.75, 6.75);
 	// allocate space on host for grayscale data
 	imageGray.create(image.rows, image.cols, CV_16UC1);
 
