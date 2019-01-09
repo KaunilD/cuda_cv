@@ -1,7 +1,4 @@
-﻿#pragma once
-
-#include <iostream>
-#include <chrono>
+#pragma once
 // CV
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -9,5 +6,15 @@
 // CUDA
 #include <cuda.h>
 #include <cuda_runtime.h>
-//
-#include "algorithms.h"
+
+class Algorithms
+{
+public:
+	Algorithms();
+	~Algorithms();
+
+	static int rgba2gray(cv::Mat, cv::Mat&);
+
+private:
+
+};

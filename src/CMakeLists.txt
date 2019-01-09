@@ -41,5 +41,11 @@ include_directories (
 )
 
 # Add source to this project's executable.
-cuda_add_executable (cuda_cv "cuda_cv.cpp" "cuda_cv.h" "kernels/hello.cu" "kernels/cv_rgb_grayscale.cu" )
+cuda_add_executable (
+cuda_cv 
+"cuda_cv.cpp" "cuda_cv.h"
+"algorithms.cpp" "algorithms.h"
+"kernels/hello.cu" 
+"kernels/cv_rgb_grayscale.cu" 
+)
 target_link_libraries( cuda_cv ${OpenCV_LIBS} )
