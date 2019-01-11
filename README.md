@@ -47,6 +47,7 @@ Entire project is built using CMake (3.9) with MSVC 2017 generator rules on Wind
 ### 3. Algorithms
 
 1. RGB to GrayScale.
+2. 1x1 Box Blur.
 
 ### implementation Notes
 
@@ -54,4 +55,3 @@ Entire project is built using CMake (3.9) with MSVC 2017 generator rules on Wind
 2. All thread blocks are then scheduled and passed over to SMs.
 3. SM execute warps of 32 threads. Each thread executes  each executing on 1 core.
 4. 1060 has 128 CUDA Cores, thus each clock cycle can execute 4 warps in each SM.
-5. 
