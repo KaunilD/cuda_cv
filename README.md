@@ -8,6 +8,8 @@ Implementation of Computer Vision algorithms with Nvidia CUDA support.
 
 1. [Dependencies](### 1.Libraries)
 2. [Setup](### 2. Setup)
+3. [Algorithms implemented](### 3. Algorithms)
+4. Implememtation Notes
 
 ### 1. Dependencies
 
@@ -40,3 +42,16 @@ Entire project is built using CMake (3.9) with MSVC 2017 generator rules on Wind
 
 #### NOTE:
 1. Do not include any `.cu` files in the cpp header files `.h`. NVCC mistakes `.cu` as cpp files on account of it being called int he header files and uses native c compiler for compilation instead of nvcc itself compiling it.
+
+
+### 3. Algorithms
+
+1. RGB to GrayScale.
+
+### implementation Notes
+
+1. Thread blocks are laid into Grids. 
+2. All thread blocks are then scheduled and passed over to SMs.
+3. SM execute warps of 32 threads. Each thread executes  each executing on 1 core.
+4. 1060 has 128 CUDA Cores, thus each clock cycle can execute 4 warps in each SM.
+5. 
