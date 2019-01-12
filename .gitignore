@@ -261,5 +261,5 @@ __pycache__/
 *.pyc
 
 #images and misc data
-data
-build
+data/
+build/
