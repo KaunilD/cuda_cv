@@ -13,7 +13,7 @@ int main()
 
 	src = cv::imread(img_filename);
 	
-	cucv::edgeDetect(src, dst, EdgeCodes::SIMPLE);
+	cucv::edgeDetect(src, dst, EdgeCodes::SOBEL);
 	
 	cv::imwrite("exp.png", dst);
 	
