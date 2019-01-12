@@ -46,7 +46,7 @@ cuda_cv
 "example.cpp" "example.h"
 "cucv.h"
 "kernels/hello.cu" 
-"kernels/color_rgba_gray.cu" 
-"kernels/filter_boxblur_gray.cu" 
+"kernels/color_rgb_gray.cu" 
+"kernels/edge_simple_gray.cu" 
 )
 target_link_libraries( cuda_cv ${OpenCV_LIBS} )
