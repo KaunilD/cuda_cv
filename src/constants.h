@@ -1,4 +1,3 @@
-
 namespace cucv{
 
 	enum ChannelCodes {

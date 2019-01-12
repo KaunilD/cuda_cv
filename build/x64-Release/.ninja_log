@@ -90,3 +90,15 @@
 10	10217	569025640	src/CMakeFiles/cuda_cv.dir/kernels/cuda_cv_generated_edge_detect.cu.obj	2f33f73e1a37a338
 10217	14085	569025644	src/CMakeFiles/cuda_cv.dir/example.cpp.obj	9a41301a47c607ce
 14086	14845	569025644	src/cuda_cv.exe	60d3396da6e08504
+1	650	569033488	build.ninja	d2106323e0920e8f
+5	11469	569033500	src/CMakeFiles/cuda_cv.dir/kernels/cuda_cv_generated_color_rgb_gray.cu.obj	befdfcc6fcc4a9ba
+22	10248	569033505	src/CMakeFiles/cuda_cv.dir/kernels/cuda_cv_generated_hello.cu.obj	29e441cf42d072cf
+5	6978	569033552	src/CMakeFiles/cuda_cv.dir/kernels/cuda_cv_generated_color_rgb_gray.cu.obj	befdfcc6fcc4a9ba
+12	7206	569033552	src/CMakeFiles/cuda_cv.dir/kernels/cuda_cv_generated_edge_detect.cu.obj	2f33f73e1a37a338
+7206	9642	569033555	src/CMakeFiles/cuda_cv.dir/example.cpp.obj	9a41301a47c607ce
+5	6961	569034029	src/CMakeFiles/cuda_cv.dir/kernels/cuda_cv_generated_color_rgb_gray.cu.obj	befdfcc6fcc4a9ba
+6962	9706	569034031	src/CMakeFiles/cuda_cv.dir/example.cpp.obj	9a41301a47c607ce
+9706	10234	569034032	src/cuda_cv.exe	aec8f9297b842e62
+4	4737	569034351	src/CMakeFiles/cuda_cv.dir/kernels/cuda_cv_generated_color_rgb_gray.cu.obj	befdfcc6fcc4a9ba
+4738	6834	569034353	src/CMakeFiles/cuda_cv.dir/example.cpp.obj	9a41301a47c607ce
+6834	7323	569034354	src/cuda_cv.exe	aec8f9297b842e62

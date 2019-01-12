@@ -3,7 +3,7 @@
 __global__ void d_calculateGradientMag(unsigned char * diffX, unsigned char * const diffY, int width, int height) {
 	int x = blockDim.x * blockIdx.x + threadIdx.x;
 	int y = blockDim.y * blockIdx.y + threadIdx.y;
-	diffY[x+width*y] = sqrt(diffY[x+width*y]*diffY[x+width*y] + diffX[x+width*y]*diffX[x+width*y]);
+	diffY[x+width*y] = diffY[x+width*y]*diffY[x+width*y] + diffX[x+width*y]*diffX[x+width*y];
 }
 
 
