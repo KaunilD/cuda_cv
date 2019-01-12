@@ -103,7 +103,7 @@ SET(CUDA_NVCC_DEPEND
  "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/include/vector_functions.h"
  "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/include/vector_functions.hpp"
  "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.2/include/vector_types.h"
- "C:/Users/dhruv/Development/cuda/cuda_cv/src/kernels/edge_sobel_gray.cu"
+ "C:/Users/dhruv/Development/cuda/cuda_cv/src/kernels/edge_detect.cu"
  "C:/Users/dhruv/Development/cuda/cuda_cv/src/kernels/utils.cu"
 )
 

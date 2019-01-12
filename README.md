@@ -46,12 +46,12 @@ Entire project is built using CMake (3.9) with MSVC 2017 generator rules on Wind
 
 ### 3. Algorithms
 
-1. RGB to GrayScale.
-2. 1x1 Box Blur.
-3. 1x2 Averaging Edge Detection
-4. 3x3 Sobel Kernel Edge Detection
+1. Color: RGB to GrayScale.
+2. Blur: 1x1 Box.
+3. Edge Detection: Simple Derivative Based
+4. Edge Detection: 3x3 Sobel Kernel
 
-### implementation Notes
+### Implementation Notes
 
 1. Thread blocks are laid into Grids. 
 2. All thread blocks are then scheduled and passed over to SMs.

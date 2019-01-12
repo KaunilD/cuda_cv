@@ -17,7 +17,8 @@ namespace cucv{
 	enum EdgeCodes {
 		SIMPLE = 0,
 		SOBEL = 1,
-		CANNY = 2
+		PREWITT = 2,
+		CANNY = 3
 	};
 
 } // namespace cucv
