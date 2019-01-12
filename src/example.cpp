@@ -13,7 +13,7 @@ int main()
 
 	src = cv::imread(img_filename);
 	
-	cucv::cvtColor<uchar3>(src, dst, ChannelConversionCodes::RGB2GRAY);
+	cucv::edgeDetect(src, dst, EdgeCodes::SOBEL);
 	
 	cv::imwrite("exp.png", dst);
 	
