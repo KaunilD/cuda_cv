@@ -48,6 +48,8 @@ Entire project is built using CMake (3.9) with MSVC 2017 generator rules on Wind
 
 1. RGB to GrayScale.
 2. 1x1 Box Blur.
+3. 1x2 Averaging Edge Detection
+4. 3x3 Sobel Kernel Edge Detection
 
 ### implementation Notes
 
