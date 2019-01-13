@@ -6,10 +6,10 @@ Implementation of Computer Vision algorithms with Nvidia CUDA support.
 
 ### Table of contents
 
-1. [Algorithms and Benchmark](###1.-algorithms) 
-2. [Dependencies](###2.-dependencies)
-3. [Setup](###3.-setup)
-4. [Implememtation Notes](#4.-implementation-notes)
+1. [Algorithms and Benchmark](#1-algorithms) 
+2. [Dependencies](#2-dependencies)
+3. [Setup](#3-setup)
+4. [Implememtation Notes](#4-implementation-notes)
 
 
 ### 1. Algorithms
@@ -60,7 +60,7 @@ Entire project is built using CMake (3.9) with MSVC 2017 generator rules on Wind
 
 
 
-### Implementation Notes
+### 4. Implementation Notes
 
 1. Thread blocks are laid into Grids. 
 2. All thread blocks are then scheduled and passed over to SMs.
