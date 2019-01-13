@@ -6,13 +6,16 @@ Implementation of Computer Vision algorithms with Nvidia CUDA support.
 
 ### Table of contents
 
-1. [Algorithms and Benchmark](### 3. Algorithms) 
-2. [Dependencies](### 1.Libraries)
-3. [Setup](### 2. Setup)
-4. Implememtation Notes
+1. [Algorithms and Benchmark](###1.-algorithms) 
+2. [Dependencies](###2.-dependencies)
+3. [Setup](###3.-setup)
+4. [Implememtation Notes](#4.-implementation-notes)
 
 
 ### 1. Algorithms
+
+1. Benchmarked on [this](https://www.flickr.com/photos/142400284@N08/46146227131/in/pool-extremelylargepanoramas/) high-resolution 29192x5140 picture by [Umit Cukurel](https://www.flickr.com/photos/142400284@N08/).  
+2. Execution time in seconds.
 
 | Algorithm     | CPU (OpenCV)  | CUDA-CV (GTX-1060)    |
 | ------------- |:-------------:| ---------------------:|
