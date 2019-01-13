@@ -19,7 +19,7 @@ Implementation of Computer Vision algorithms with Nvidia CUDA support.
 
 | Algorithm     | CPU (OpenCV)  | CUDA-CV (GTX-1060)    |
 | ------------- |:-------------:| ---------------------:|
-| RGB2GRAY      | 0.058 | 0.112 |
+| RGB2GRAY      | 0.112 | 0.058 |
 | EDGE::SIMPLE |  | 0.018 |
 | EDGE::SOBEL | 3.932 | 0.030 |
 | EDGE::PREWITT |  | 0.074 |
