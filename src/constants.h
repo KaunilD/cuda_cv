@@ -20,4 +20,10 @@ namespace cucv{
 		CANNY = 3
 	};
 
+	enum FilterCodes {
+		BOX = 0,
+		GAUSSIAN = 1,
+		MEDIAN = 2,
+		WEIGHTED = 3
+	};
 } // namespace cucv

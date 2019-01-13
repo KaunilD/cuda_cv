@@ -41,3 +41,14 @@ __device__ void d_getNeighbours_8(
 	neighbours.p33 = d_getPixel(src, x+1, y+1, width, height);
 
 }
+
+template <typename T>
+__device__ char d_avgNeighbours_8(
+	Neighbours3x3<T> &neighbours
+) {
+	return (
+		neighbours.p11.x + neighbours.p12.x + neighbours.p13.x +
+		neighbours.p21.x + neighbours.p22.x + neighbours.p23.x +
+		neighbours.p31.x + neighbours.p32.x + neighbours.p33.x
+	)/9.0;
+}

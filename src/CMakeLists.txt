@@ -47,6 +47,7 @@ cuda_cv
 "cucv.h" 
 "kernels/hello.cu" 
 "kernels/color.cu" 
+"kernels/filter.cu" 
 "kernels/edge_detect.cu"
 )
 
