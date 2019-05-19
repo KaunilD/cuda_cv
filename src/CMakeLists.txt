@@ -1,6 +1,4 @@
-﻿# CMakeList.txt : CMake project for cuda_cv, include source and define
-# project specific logic here.
-cmake_minimum_required (VERSION 3.8)
+﻿cmake_minimum_required (VERSION 3.8)
 
 find_package( OpenCV REQUIRED )
 find_package( CUDA REQUIRED )
@@ -35,20 +33,32 @@ else(CUDA_FOUND)
 	message("CUDA is not installed on this system.")
 endif()
 
-# Include sub-projects.
-include_directories (
-	"kernels"
+set (
+	CUCV_LIBS ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-# Add source to this project's executable.
-cuda_add_executable (
-cuda_cv 
-"example.cpp" "example.h" 
-"cucv.h" 
-"kernels/hello.cu" 
-"kernels/color.cu" 
-"kernels/filter.cu" 
-"kernels/edge_detect.cu"
+set ( KERNELS
+	kernels/color.cu
+	kernels/edge_detect.cu
+	kernels/filter.cu
+	kernels/matcher.cu
+	kernels/utils.cu
 )
 
-target_link_libraries( cuda_cv ${OpenCV_LIBS} )
+set ( HEADERS
+	${CMAKE_SOURCE_DIR}/include/constants.h
+)
+
+set ( SRCS
+	cucv.h
+)
+
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+add_library( libcudacv STATIC
+	${KERNELS}
+	${HEADERS}
+	${SRCS}
+)
+
+target_link_libraries( libcudacv  ${OpenCV_LIBS})

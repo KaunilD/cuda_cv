@@ -2,7 +2,7 @@
 
 Implementation of Computer Vision algorithms with Nvidia CUDA support.
 
-![execution chart](comparision.png)
+![execution chart](res/comparision.png)
 
 ### Table of contents
 
