@@ -72,3 +72,4 @@ Entire project is built using CMake (3.9) with MSVC 2017 generator rules on Wind
 ### 5. WIP
 
 1. Feature Matching.
+2. Euclidean Distance Transform.
