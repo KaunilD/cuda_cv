@@ -34,10 +34,6 @@ else(CUDA_FOUND)
 	message("CUDA is not installed on this system.")
 endif()
 
-set (
-	CUCV_LIBS ${CMAKE_CURRENT_SOURCE_DIR}
-)
-
 set ( KERNELS
 	kernels/color.cu
 	kernels/edge_detect.cu
@@ -48,13 +44,12 @@ set ( KERNELS
 
 set ( HEADERS
 	${CMAKE_SOURCE_DIR}/include/constants.h
+	${CMAKE_SOURCE_DIR}/include/cuda_cv.h
 )
 
 set ( SRCS
-	cucv.h
+	cuda_cv.cpp
 )
-
-include_directories(${CMAKE_SOURCE_DIR}/include)
 
 add_library( libcudacv STATIC
 	${KERNELS}
@@ -62,4 +57,7 @@ add_library( libcudacv STATIC
 	${SRCS}
 )
 
-target_link_libraries( libcudacv  ${OpenCV_LIBS})
+target_include_directories( libcudacv PUBLIC ${CMAKE_SOURCE_DIR}/include )
+target_include_directories( libcudacv PUBLIC ${CUDA_INCLUDE_DIRS})
+
+target_link_libraries( libcudacv ${OpenCV_LIBS})

@@ -10,7 +10,7 @@ int main()
 	double duration;
 	std::clock_t start;
 	cv::Mat src, dst;
-	const string& img_filename = "/home/nvidia/Pictures/high_res/1.jpg";
+	const string& img_filename = "exp.png";
 
 	src = cv::imread(img_filename);
 	
