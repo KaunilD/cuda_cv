@@ -11,7 +11,7 @@
 #include <cuda_runtime.h>
 // Constants
 #include "constants.h"
-
+#include "utils.h"
 
 void h_edgeDetect_SIMPLE(
 	const uchar1 * src,
@@ -46,3 +46,7 @@ void h_filter_BOX_GRAY(
 	unsigned char * dst,
 	int width, int height
 );
+
+namespace cucv {
+	int cvtColor(cv::Mat src, cv::Mat &dst, int code);
+}

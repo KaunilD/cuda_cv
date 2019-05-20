@@ -45,10 +45,12 @@ set ( KERNELS
 set ( HEADERS
 	${CMAKE_SOURCE_DIR}/include/constants.h
 	${CMAKE_SOURCE_DIR}/include/cuda_cv.h
+	${CMAKE_SOURCE_DIR}/include/utils.h
 )
 
 set ( SRCS
 	cuda_cv.cpp
+	utils.cpp
 )
 
 add_library( libcudacv STATIC

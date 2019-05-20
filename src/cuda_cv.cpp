@@ -2,11 +2,7 @@
 
 namespace cucv {
 
-	template <typename ucharT>
 	int cvtColor (cv::Mat src, cv::Mat& dst, int code) {
-
-		ucharT *d_src_data, *h_src_data;
-		unsigned char *d_dst_data, *h_dst_data;
 		size_t num_pixels = src.rows*src.cols;
 
 		switch (code) {
@@ -21,25 +17,20 @@ namespace cucv {
 			}
 		}
 
-		h_src_data = (ucharT *)src.ptr<unsigned char>(0);
-		h_dst_data = dst.ptr<unsigned char>(0);
-
-		cudaMalloc(&d_src_data, sizeof(ucharT) * num_pixels);
-		cudaMemcpy(d_src_data, h_src_data, sizeof(ucharT) * num_pixels, cudaMemcpyHostToDevice);
+		// make space and copy source image into the GPU
+		// return the pointer to data copied into the GPU
+		uchar3 *h_src_data = (uchar3 *)src.ptr<unsigned char>(0);
+		uchar3 *d_src_data = cuda_make_array(h_src_data, sizeof(uchar3) * num_pixels);
 		
-		cudaMalloc(&d_dst_data, sizeof(unsigned char) * num_pixels);
-		cudaMemset(d_dst_data, 0, sizeof(unsigned char) * num_pixels);
+		// hook for result of the operation on the GPU
+		// ceate space in the GPU for result image 
+		// and initialize it to zero
+		unsigned char *d_dst_data = cuda_set_array(sizeof(unsigned char) * num_pixels);
 		
-		std::clock_t start;
-		double duration;
-
 		switch (code) {
 			case ChannelConversionCodes::RGB2GRAY: {
-
-				start = std::clock();
 				h_cvtColor_RGB2GRAY(d_src_data, d_dst_data, src.cols, src.rows);
-				duration = (std::clock() - start) / (double)CLOCKS_PER_SEC;
-				std::cout << "printf: " << duration << '\n';
+				std::cout << "done" << '\n';
 				break;
 			}
 			default: {
@@ -49,7 +40,9 @@ namespace cucv {
 			}
 		}
 
-		
+		// hook for the result of the operation on the host
+		unsigned char *h_dst_data = dst.ptr<unsigned char>(0);
+		// copy from GPU to host for writing to file.
 		cudaMemcpy(h_dst_data, d_dst_data, sizeof(unsigned char) * num_pixels, cudaMemcpyDeviceToHost);
 		
 		cudaFree(d_src_data);
