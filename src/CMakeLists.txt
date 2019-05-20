@@ -44,12 +44,16 @@ set ( KERNELS
 
 set ( HEADERS
 	${CMAKE_SOURCE_DIR}/include/constants.h
-	${CMAKE_SOURCE_DIR}/include/cuda_cv.h
+	${CMAKE_SOURCE_DIR}/include/color.h
+	${CMAKE_SOURCE_DIR}/include/edge.h
+	${CMAKE_SOURCE_DIR}/include/filters.h
 	${CMAKE_SOURCE_DIR}/include/utils.h
 )
 
 set ( SRCS
-	cuda_cv.cpp
+	color.cpp
+	edge.cpp
+	filters.cpp
 	utils.cpp
 )
 

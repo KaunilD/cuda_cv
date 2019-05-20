@@ -14,12 +14,28 @@
 #include "utils.h"
 
 
-void h_filter_BOX_GRAY(
+void h_edgeDetect_SIMPLE(
 	const uchar1 * src,
 	unsigned char * dst,
+	unsigned char * temp,
 	int width, int height
 );
 
+void h_edgeDetect_SOBEL(
+	const uchar1 * src,
+	unsigned char * dst,
+	unsigned char * temp,
+	int width, int height
+);
+
+void h_edgeDetect_PREWITT(
+	const uchar1 * src,
+	unsigned char * dst,
+	unsigned char * temp,
+	int width, int height
+);
+
+
 namespace cucv {
-	int filter(cv::Mat , cv::Mat , int );
+	int edgeDetect(cv::Mat, cv::Mat&, int);
 }

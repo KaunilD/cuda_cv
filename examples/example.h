@@ -1,3 +1,2 @@
 ﻿#pragma once
-// CUCV
-#include "cuda_cv.h"
+#include "color.h"
