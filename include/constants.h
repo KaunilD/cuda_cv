@@ -10,7 +10,8 @@ namespace cucv{
 		RGB2GRAY = 0,
 		RGBA2GRAY = 1,
 		GRAY2RGB = 2,
-		GRAY2RGBA = 3
+		GRAY2RGBA = 3,
+		RGB2HSV = 4
 	};
 
 	enum EdgeCodes {

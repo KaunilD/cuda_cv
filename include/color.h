@@ -19,6 +19,12 @@ void h_cvtColor_RGB2GRAY(
 	int width, int height
 );
 
+void h_cvtColor_RGB2HSV(
+	const uchar3 * src,
+	uchar3 * dst,
+	int width, int height
+);
+
 namespace cucv {
 	int cvtColor(cv::Mat src, cv::Mat &dst, int code);
 }
