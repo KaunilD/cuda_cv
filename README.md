@@ -1,4 +1,4 @@
-### CUDA-CV
+### CUDA-CV - deprecated/old. ps tensor_lib for more updates
 
 Implementation of Computer Vision algorithms with Nvidia CUDA support.
 
